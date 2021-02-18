@@ -1,4 +1,4 @@
-DAY-01 ( models planing )
+# DAY-01 ( models planing )
 
 * class Request:
     * R number
