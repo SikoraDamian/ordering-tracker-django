@@ -1,4 +1,4 @@
-# DAY-01 ( models planing )
+# DAY-01 ( models planning )
 
 * class Request:
     * R number
@@ -19,3 +19,4 @@
     * Total
     * Q_Status (S)
     * Cad_share
+
