@@ -20,5 +20,5 @@
     * Q_Status (S)
     * Cad_share
 
-![Models chart](/models.png)
+![Models chart](https://github.com/SikoraDamian/ordering-tracker-django/blob/day001/models.PNG)
 Format: ![Alt Text](url)
