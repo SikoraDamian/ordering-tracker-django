@@ -1,10 +1,21 @@
 DAY-01 ( models planing )
 
-* class Order(models.Model):
-    * Request_number = models.ChardField(max_length = 12, null=False)
-    * Vendor = models.Choice
-    * Quote_number = models.ChardFiels(max_length = 25)
-    * Total = models.ChardField(max_length = 10)
-    * Delivery_date = mosels.DataField()
-    * Ereq_number = models.IntegerField
-    * Pr_Pcard_number =  models.ChardFields()
+* class Request:
+    * R number
+    * R status (S)
+    * Descriptions
+
+* class Order
+    * R number (F)
+    * Vendor (S)
+    * Quote (F)
+    * O_Status (S)
+    * eReq
+    * PR_PCard
+    * Delivery
+
+* class Quote
+    * Quote number
+    * Total
+    * Q_Status (S)
+    * Cad_share
