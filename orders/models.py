@@ -33,23 +33,23 @@ REQUEST_STATUS = [
 ]
 
 class Request(models.Model):
-    request_number = models.CharFields(max_length=20)
-    descriptions = models.CharFields(max_length=120)
-    request_status = models.CharFields(max_length=20, choices=REQUEST_STATUS)
+    request_number = models.CharField(max_length=20)
+    descriptions = models.CharField(max_length=120)
+    request_status = models.CharField(max_length=20, choices=REQUEST_STATUS)
 
 class Quote(models.Model):
-    quote_number = models.CharFields(max_length=20)
-    total = models.CharFields(max_length=20)
-    quote_status = models.CharFields(max_length=20, choices=QUOTE_STATUS)
-    cad_shared = models.IntegerField(defoult=False)
+    quote_number = models.CharField(max_length=20)
+    total = models.CharField(max_length=20)
+    quote_status = models.CharField(max_length=20, choices=QUOTE_STATUS)
+    cad_shared = models.IntegerField(default=False)
 
 class Order(models.Model):
-    request_number_f = models.OneToOne(request_number, on_delete=models.CASCADE)
-    quote_number_f = models.OneToOne(quote_number, on_delete=models.CASCADE)
-    vendor = models.CharFields(max_length=20, choices=VENDOR_CHOICES)
-    order_status =  models.CharFields(max_length=20, choices=ORDER_STATUS)
-    ereq = models.CharFields(max_length=20)
-    pr_pcard = models.CharFields(max_length=20)
+    request_number = models.ForeignKey(Request, on_delete=models.CASCADE)
+    quote_number = models.ForeignKey(Quote, on_delete=models.CASCADE)
+    vendor = models.CharField(max_length=20, choices=VENDOR_CHOICES)
+    order_status =  models.CharField(max_length=20, choices=ORDER_STATUS)
+    ereq = models.CharField(max_length=20)
+    pr_pcard = models.CharField(max_length=20)
     delivery = models.DateField()
 
 
