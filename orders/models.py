@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 VENDOR_CHOICES = [
     ('PHARMA', 'Pharma Stainless'),
     ('QED', 'QED'),
